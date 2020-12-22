@@ -24,6 +24,9 @@ Application parts are:
     │
     tests                - Codes without test are is an illusion 
 
+## Swagger Example
+![post_swagger](post_swagger.png)
+![response_swagger](response_swagger.png)
 
 ## Requirements
 
@@ -41,13 +44,13 @@ source venv/bin/activate
 make install
 ```
 
-#### Runnning Localhost
+#### Running Localhost
 
 ```sh
 make run
 ```
 
-#### Deploy app
+#### Running Via Docker
 
 ```sh
 make deploy
@@ -71,7 +74,7 @@ python -c "import uuid;print(str(uuid.uuid4()))"
 
 ```
 
-## Run without make for testing
+## Run without `make` for development
 
 1. Start your  app with: 
 ```bash
