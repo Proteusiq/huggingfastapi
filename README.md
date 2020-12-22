@@ -1,5 +1,5 @@
 # Question Answering API
-> 🤗 Huggingface + ⚡ FastAPI = ❤️ Receive context and question returns answers
+> 🤗 Huggingface + ⚡ FastAPI = ❤️ Receive context and question returns answers. Demo example on how to package HuggingFace model in FastAPI
 
 ![huggingfastapi](hf.png)
 How to server Hugging face models with FastAPI, the Python's fastest API framework. 
