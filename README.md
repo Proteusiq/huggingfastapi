@@ -9,9 +9,25 @@ Project structure for development and production.
 Installation and setup instructions to 
 run the development mode model and serve a local RESTful API endpoint.
 
+## Project structure
+
+Files related to application are in the `huggingfastapi` or `tests` directories.
+Application parts are:
+
+    huggingfastapi
+    ├── api   - Main API.
+    │   └── routes       - Web routes.
+    ├── core             - Application configuration, startup events, logging.
+    ├── models           - Pydantic models for api.
+    ├── services         - NLP logics.
+    └── main.py          - FastAPI application creation and configuration.
+    │
+    tests                - Codes without test are is an illusion 
+
+
 ## Requirements
 
-Python 3.6+
+Python 3.7+
 
 ## Installation
 Install the required packages in your local environment (ideally virtualenv, conda, etc.).
@@ -25,22 +41,23 @@ source venv/bin/activate
 make install
 ```
 
-## Runnning Localhost
+#### Runnning Localhost
 
-`make run`
+```sh
+make run
+```
 
-## Deploy app
+#### Deploy app
 
-`make deploy`
+```sh
+make deploy
+```
 
-## Running Tests
+#### Running Tests
 
-`make test`
-
-## Runnning Easter Egg
-
-`make easter`
-
+```sh
+make test
+```
 
 ## Setup
 1. Duplicate the `.env.example` file and rename it to `.env` 
@@ -48,12 +65,12 @@ make install
 
 2. In the `.env` file configure the `API_KEY` entry. The key is used for authenticating our API. <br>
    Execute script to generate .env, and replace `example_key`with the UUID generated:
+
 ```bash
 make generate_dot_env
 python -c "import uuid;print(str(uuid.uuid4()))"
 
 ```
-
 
 ## Run It
 
@@ -81,19 +98,7 @@ tox
 
 This runs tests and coverage for Python 3.8 and Flake8, Bandit.
 
-## Project structure
 
-Files related to application are in the `huggingfastapi` or `tests` directories.
-Application parts are:
-
-    huggingfastapi
-    ├── huggingfastapi   - web related stuff.
-    │   └── routes       - web routes.
-    ├── core             - application configuration, startup events, logging.
-    ├── models           - pydantic models for api.
-    ├── services         - logic that is not just crud related.
-    └── main.py          - FastAPI application creation and configuration.
-    │
-    tests                  - pytest
-
-      
+# TODO
+[ ] Change make to invoke
+[ ] Add endpoint for uploading text file and questions

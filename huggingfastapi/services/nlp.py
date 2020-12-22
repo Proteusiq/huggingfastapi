@@ -41,7 +41,7 @@ class QAModel(object):
     def _post_process(self, prediction: Dict) -> QAPredictionResult:
         logger.debug("Post-processing prediction.")
 
-        qa = QuestionPredictionResult(**prediction)
+        qa = QAPredictionResult(**prediction)
 
         return qa
 
