@@ -94,5 +94,5 @@ This runs tests and coverage for Python 3.8 and Flake8, Bandit.
 
 
 # TODO
-[ ] Change make to invoke
-[ ] Add endpoint for uploading text file and questions
+- [ ] Change make to invoke
+- [ ] Add endpoint for uploading text file and questions
