@@ -1,7 +1,7 @@
 # Question Answering API
 > 🤗 Huggingface + ⚡ FastAPI = ❤️ Receive context and question returns answers
 
-
+![huggingfastapi](hf.png)
 How to server Hugging face models with FastAPI, the Python's fastest API framework. 
 
 Project structure for development and production. 
@@ -27,7 +27,7 @@ Application parts are:
 
 ## Requirements
 
-Python 3.7+
+Python 3.6+, [Make and Docker]
 
 ## Installation
 Install the required packages in your local environment (ideally virtualenv, conda, etc.).
@@ -62,7 +62,6 @@ make test
 ## Setup
 1. Duplicate the `.env.example` file and rename it to `.env` 
 
-
 2. In the `.env` file configure the `API_KEY` entry. The key is used for authenticating our API. <br>
    Execute script to generate .env, and replace `example_key`with the UUID generated:
 
@@ -72,11 +71,11 @@ python -c "import uuid;print(str(uuid.uuid4()))"
 
 ```
 
-## Run It
+## Run without make for testing
 
 1. Start your  app with: 
 ```bash
-uvicorn huggingfastapi.main:app
+PYTHONPATH=./huggingfastapi uvicorn main:app --reload
 ```
 
 2. Go to [http://localhost:8000/docs](http://localhost:8000/docs) or  [http://localhost:8000/redoc](http://localhost:8000/redoc) for alternative swagger
@@ -84,18 +83,13 @@ uvicorn huggingfastapi.main:app
 3. Click `Authorize` and enter the API key as created in the Setup step.
 
    
-## Run Tests
+## Run Tests with using `make`
 
-If you're not using `tox`, please install with:
+Intall testing libraries and run `tox`:
 ```bash
 pip install tox pytest flake8 coverage bandit
-```
-
-Run your tests with: 
-```bash
 tox
 ```
-
 This runs tests and coverage for Python 3.8 and Flake8, Bandit.
 
 

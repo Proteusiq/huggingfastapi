@@ -7,7 +7,7 @@ from transformers import PreTrainedTokenizer
 
 
 class ModelLoader:
-    """ ModelLoader
+    """ModelLoader
     Downloading and Loading Hugging FaceModels
        Download occurs only when model is not located in the local model directory
        If model exists in local directory, load.
@@ -65,12 +65,11 @@ class ModelLoader:
         logger.debug("[+] Loading completed")
         return tokenizer, model
 
-    def retrieve(self)-> t.Tuple:
+    def retrieve(self) -> t.Tuple:
+
         """Retriver
 
         Returns:
             Tuple: tokenizer, model
         """
         return self.tokenizer, self.model
-
-

@@ -21,6 +21,6 @@ def post_question(
     """
 
     model: QAModel = request.app.state.model
-    prediction: QuestionPredictionResult = model.predict(block_data)
+    prediction: QAPredictionResult = model.predict(block_data)
 
     return prediction

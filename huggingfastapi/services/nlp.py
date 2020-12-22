@@ -15,7 +15,6 @@ from huggingfastapi.core.config import (
 )
 
 
-
 class QAModel(object):
     def __init__(self, path=DEFAULT_MODEL_PATH):
         self.path = path
@@ -31,7 +30,6 @@ class QAModel(object):
         ).retrieve()
 
         self.nlp = pipeline("question-answering", model=model, tokenizer=tokenizer)
-
 
     def _pre_process(self, payload: QAPredictionPayload) -> List:
         logger.debug("Pre-processing payload.")
@@ -50,7 +48,6 @@ class QAModel(object):
 
         context, question = features
 
-    
         QA_input = {
             "question": question,
             "context": context,

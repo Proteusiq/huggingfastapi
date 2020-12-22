@@ -17,7 +17,7 @@ endif
 all: clean test install run deploy down
 
 test:
-	pip install setuptools tox
+	python -m pip install --upgrade pip && pip install setuptools tox
 	tox
 
 install: generate_dot_env
