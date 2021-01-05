@@ -1,8 +1,8 @@
 # Question Answering API
-> 🤗 Huggingface + ⚡ FastAPI = ❤️ Receive context and question returns answers. Demo example on how to package HuggingFace model in FastAPI
+> 🤗 Huggingface + ⚡ FastAPI = ❤️ Awesomeness. How to structure Deep Learning model serving REST API with FastAPI
 
 ![huggingfastapi](hf.png)
-How to server Hugging face models with FastAPI, the Python's fastest API framework. 
+How to server Hugging face models with FastAPI, the Python's fastest REST API framework. 
 
 Project structure for development and production. 
 
@@ -15,7 +15,7 @@ Files related to application are in the `huggingfastapi` or `tests` directories.
 Application parts are:
 
     huggingfastapi
-    ├── api   - Main API.
+    ├── api              - Main API.
     │   └── routes       - Web routes.
     ├── core             - Application configuration, startup events, logging.
     ├── models           - Pydantic models for api.
