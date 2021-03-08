@@ -22,7 +22,7 @@ Application parts are:
     ├── services         - NLP logics.
     └── main.py          - FastAPI application creation and configuration.
     │
-    tests                - Codes without test are is an illusion 
+    tests                - Codes without tests is an illusion 
 
 ## Swagger Example
 ![post_swagger](post_swagger.png)
