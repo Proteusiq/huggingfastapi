@@ -97,5 +97,5 @@ This runs tests and coverage for Python 3.8 and Flake8, Bandit.
 
 
 # TODO
-- [ ] Change make to invoke
+- [X] Change make to invoke: invoke is overrated
 - [ ] Add endpoint for uploading text file and questions
