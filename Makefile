@@ -28,14 +28,14 @@ run:
 	PYTHONPATH=huggingfastapi/ uvicorn huggingfastapi.main:app --reload --host 0.0.0.0
 
 build: generate_dot_env
-	docker-compose build
+	docker compose build
 
 deploy: generate_dot_env
-	docker-compose build
-	docker-compose up -d
+	docker compose build
+	docker compose up -d
 
 down:
-	docker-compose down
+	docker compose down
 
 generate_dot_env:
 	@if [[ ! -e .env ]]; then \
