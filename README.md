@@ -86,7 +86,7 @@ PYTHONPATH=./huggingfastapi uvicorn main:app --reload
 3. Click `Authorize` and enter the API key as created in the Setup step.
 
    
-## Run Tests with using `make`
+## Run Tests without using `make`
 
 Intall testing libraries and run `tox`:
 ```bash
