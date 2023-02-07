@@ -4,7 +4,7 @@
 ![huggingfastapi](hf.png)
 How to server Hugging face models with FastAPI, the Python's fastest REST API framework. 
 
-Project structure for development and production. 
+The minimalistic project structure for development and production. 
 
 Installation and setup instructions to 
 run the development mode model and serve a local RESTful API endpoint.
